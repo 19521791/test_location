@@ -3,7 +3,9 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {"name": "Toa A"},
+      "properties": {
+        "name": "Toa A"
+      },
       "geometry": {
         "coordinates": [
           [
@@ -139,7 +141,9 @@
     },
     {
       "type": "Feature",
-      "properties": {"name": "Nha xe"},
+      "properties": {
+        "name": "Nha xe"
+      },
       "geometry": {
         "coordinates": [
           [
@@ -186,7 +190,9 @@
     },
     {
       "type": "Feature",
-      "properties": {"name": "Toa B"},
+      "properties": {
+        "name": "Toa B"
+      },
       "geometry": {
         "coordinates": [
           [
@@ -309,7 +315,9 @@
     },
     {
       "type": "Feature",
-      "properties": {"name": "Nha an"},
+      "properties": {
+        "name": "Nha an"
+      },
       "geometry": {
         "coordinates": [
           [
@@ -412,7 +420,9 @@
     },
     {
       "type": "Feature",
-      "properties": {"name": "Quan cf"},
+      "properties": {
+        "name": "Quan cf"
+      },
       "geometry": {
         "coordinates": [
           [
@@ -451,7 +461,9 @@
     },
     {
       "type": "Feature",
-      "properties": {"name": "phong bao ve"},
+      "properties": {
+        "name": "phong bao ve"
+      },
       "geometry": {
         "coordinates": [
           [
@@ -498,7 +510,9 @@
     },
     {
       "type": "Feature",
-      "properties": {"name": "Toa D"},
+      "properties": {
+        "name": "Toa D"
+      },
       "geometry": {
         "coordinates": [
           [
@@ -529,7 +543,9 @@
     },
     {
       "type": "Feature",
-      "properties": {"name": "Toa C"},
+      "properties": {
+        "name": "Toa C"
+      },
       "geometry": {
         "coordinates": [
           [
@@ -711,6 +727,111 @@
             [
               106.80279409424486,
               10.869830529805824
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              106.80314083636944,
+              10.86924373800258
+            ],
+            [
+              106.80301887408439,
+              10.86924768660576
+            ],
+            [
+              106.80300547163546,
+              10.869048940190709
+            ],
+            [
+              106.80315289857236,
+              10.869048940190709
+            ],
+            [
+              106.80314083636944,
+              10.86924373800258
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              106.8032413547358,
+              10.869254267610614
+            ],
+            [
+              106.80320650836819,
+              10.869101588260705
+            ],
+            [
+              106.80325207669438,
+              10.868912055166419
+            ],
+            [
+              106.80329764502045,
+              10.868851509846394
+            ],
+            [
+              106.80378549416236,
+              10.869105536865703
+            ],
+            [
+              106.80380827832545,
+              10.869214781579188
+            ],
+            [
+              106.80366755261048,
+              10.869310864246685
+            ],
+            [
+              106.8032413547358,
+              10.869254267610614
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              106.80293577890018,
+              10.869233208394988
+            ],
+            [
+              106.80278299098234,
+              10.869233208394988
+            ],
+            [
+              106.80279773367738,
+              10.869001556920267
+            ],
+            [
+              106.80294248012547,
+              10.869001556920267
+            ],
+            [
+              106.80293577890018,
+              10.869233208394988
             ]
           ]
         ],

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mapbox with GeoJSON</title>
+  <title>Mapbox with GeoJSON and GeoLocation</title>
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet" />
   <style>
     #map {
@@ -18,32 +18,50 @@
 
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
   <script>
-    // Cấu hình Mapbox
+    // hardcode
     mapboxgl.accessToken = 'pk.eyJ1IjoiZG91Z2x1c25ndXllbiIsImEiOiJjbTR3cGlybGYwaG1mMmpwd2JubmM5eDk5In0.zRPJJW7rui_Cjz1OioFIVA'; // Thay 'YOUR_MAPBOX_ACCESS_TOKEN' bằng token của bạn
 
     const map = new mapboxgl.Map({
-      container: 'map', // ID của container nơi bản đồ sẽ được hiển thị
-      style: 'mapbox://styles/mapbox/streets-v11', // Kiểu bản đồ (có thể thay đổi)
-      center: [106.6297, 10.8231], // Vị trí trung tâm bản đồ (long, lat)
-      zoom: 12, // Mức zoom ban đầu
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [106.8030304451, 10.8699855183],
+      zoom: 17,
     });
 
-    // Tải GeoJSON vào bản đồ
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        const userLocation = [position.coords.longitude, position.coords.latitude];
+
+        map.setCenter(userLocation);
+        map.setZoom(17);
+
+        new mapboxgl.Marker()
+          .setLngLat(userLocation)
+          .setPopup(new mapboxgl.Popup().setHTML("<h3>You are here</h3>"))
+          .addTo(map);
+        
+        console.log("User's location:", userLocation);
+      }, function(error) {
+        console.error("Geolocation error: ", error);
+        alert("Error getting your location: " + error.message);
+      });
+    } else {
+      alert("Geolocation is not supported by your browser.");
+    }
+
     map.on('load', function () {
-      // Thêm dữ liệu GeoJSON
       map.addSource('my-geojson', {
         type: 'geojson',
-        data: './data/test_data.geojson' // Thay thế bằng đường dẫn đến tệp GeoJSON của bạn
+        data: './data/test_data.geojson'
       });
 
-      // Thêm layer để hiển thị dữ liệu
       map.addLayer({
         id: 'geojson-layer',
         type: 'fill',
         source: 'my-geojson',
         paint: {
-          'fill-color': '#888888',
-          'fill-opacity': 0.4
+          'fill-color': '#AB886D',
+          'fill-opacity': 0.7
         }
       });
     });
